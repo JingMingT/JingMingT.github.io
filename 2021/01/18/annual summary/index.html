@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>第一篇博客，讲讲搭建过程 - 景明&#39;s Blog</title>
+  <title>这是我的第一篇博客，讲讲搭建过程里的趣事 - 景明&#39;s Blog</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
@@ -135,7 +135,7 @@
         <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
       
     </div>
-    <div class="center">第一篇博客，讲讲搭建过程</div>
+    <div class="center">这是我的第一篇博客，讲讲搭建过程里的趣事</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -176,18 +176,18 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/one.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">第一篇博客，讲讲搭建过程</h1>
+    <h1 class="head-title">这是我的第一篇博客，讲讲搭建过程里的趣事</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>一月 18, 2021</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4039</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4030</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
-        <h3 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h3><p>奔溃了，第一个经验教训，不要在在线MarkDown编辑器上写东西，写了一个小时，没保存，网页跳转后，全部内容都丢失了。</p>
-<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>紧张但是又悠闲的期末复习周，也即2021年1月17日晚上，在复习运营管理的内容，实在是枯燥无聊，于是只觉得万物都变得有趣了起来，原先设想过的待办的点子都一股脑出来了。不过因为是在思源学堂的办公室，所以不太可能光明正大地打游戏来摸鱼，这显然不可取，毕竟有人打游戏吃零食被拍了照片发群里，挺丢脸的（虽然自习也是被禁止的）。那么好久之前就设想过的搭建个人博客网站，就变成了极佳的选择，因为需要敲代码，看上去总归是在办正事。<br>在搜罗了一些背景资料后，选择倚靠GitHub与Hexo来搭建自己的博客，于是有了这篇文章来做分享，我将从完全小白（自身）角度出发，一板一眼还原过程，希望对如果也想搭建个人博客的你有所帮助吧。</p>
+        <h3 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h3><p>奔溃了，第一个经验教训，不要在在线MarkDown编辑器上写东西，写了一个小时，没保存，网页跳转后，就全部内容丢失了。</p>
+<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>紧张但是又悠闲的期末复习周，也即2021年1月17日晚上，笔者复习运营管理的内容，实在是枯燥无聊，于是只觉得万物都变得有趣了起来，原先设想过的所有点子都一股脑出来了。不过因为是在思源学堂的办公室，所以不太可能光明正大地打游戏来摸鱼，这显然不可取，毕竟有人打游戏吃零食被拍了照片发群里，挺丢脸的。那么好久之前就设想过的搭建个人博客网站，就变成了极佳的选择，因为需要敲代码，看上去总归是在办正事。<br>在搜罗了一些背景资料后，选择倚靠GitHub与Hexo来搭建自己的博客，于是又了这篇文章来做分享，我将从完全小白（自身）角度出发，一板一眼还原过程，希望对如果也想搭建自己的个人博客的你有所帮助吧。</p>
 <h3 id="安装Git与运行"><a href="#安装Git与运行" class="headerlink" title="安装Git与运行"></a>安装Git与运行</h3><p>来，第一步，注册一个全球最大同性交友网站的账号，百度搜索GitHub，这是个外国网站，但是没有墙，所以可以流畅访问，用你的邮箱注册就可以了。进去之后呢，先点击New repository来创建，把它命名为“你的用户名.github.io”，然后请一定要注意，<br>不要设置为private！<br>不要设置为private！<br>不要设置为private！<br>那好，下一步学会下载Git，请从国内<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/" title="淘宝镜像">淘宝镜像</a>下载，因为外国网站是在是太慢了。安装的话，除了你想控制安装路径外，别的都选默认就可以了，无妨。如果安装成功了的话，你可以在自己的电脑的开始界面，看到叫做“Git Bash”的东西了。接下来，你需要知道有关叫做CMD的东西，它就在你的电脑上，就像是你看电影里的顶级黑客经常用的背景为黑色的玩意。电脑搜索框搜索“CMD”就可以看到它，点开，敲代码该干活了，切换到英文输入法，输入以下代码，输入第一条后，按下回车键，等它运行完，再输入第二行，再按回车键：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;你的GitHub用户名&quot;</span><br>git config --global user.email <span class="hljs-string">&quot;你的GitHub注册邮箱&quot;</span><br></code></pre></td></tr></table></figure>
 <p>然后输入以下代码来生成密匙：</p>
@@ -213,7 +213,7 @@
 <p>再输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean <br>hexo g <br>hexo d<br></code></pre></td></tr></table></figure>
 <p>行，到这里一切顺利没有出问题的话，你的朋友就可以通过在浏览器输入你的用户名.github.io到达你的网站了！Congratulation！</p>
-<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>我知道，大伙肯定不会满意这个丑丑又难听的网站域名。但是，这是免费的，好听的你得买！去腾讯云吧，买个域名很简单，这里不做介绍，因为你百度腾讯云后，是个很友好的商业界面，我们说说买完了后你要干什么。<br>第一步，实名认证，不实名认证的话，你的域名是没有办法生效的，也就是无用。从提交身份证实名认证到审核完成后，大抵需要一天时间。<br>第二步，添加解析如下图，聪明如你，到这里说明你已经超过90%的小白，应该能看懂这个图。<br><img    class="lazyload" data-original="D:\个人博客配图\域名解析.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">avatar</span><br>第三步，在GitHub你创建的repository里点击settings，找到custom domain选项，把你买的域名填进去保存。<br>第四步，在D/Myblog/source创建一个txt文件，命名为CNAME，然后把你的域名填进去，别加www,然后另存为<strong>所有类型</strong>，然后把它的txt后缀删除。然后CMD：</p>
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>我知道，大伙肯定不会满意这个丑丑又难听的网站域名。但是，这是免费的，好听的你得买！去腾讯云吧，买个域名很简单，这里不做介绍，因为你百度腾讯云后，是个很友好的商业界面，我们说说买完了后你要干什么。<br>第一步，实名认证，不实名认证的话，你的域名是没有办法生效的，也就是无用。从提交身份证实名认证到审核完成后，大抵需要一天时间。<br>第二步，添加解析如下图，聪明如你，到这里说明你已经超过90%的小白，应该能看懂这个图。<br><img    class="lazyload" data-original="D:/个人博客配图/域名解析.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">avatar</span><br>第三步，在GitHub你创建的repository里点击settings，找到custom domain选项，把你买的域名填进去保存。<br>第四步，在D/Myblog/source创建一个txt文件，命名为CNAME，然后把你的域名填进去，别加www,然后另存为<strong>所有类型</strong>，然后把它的txt后缀删除。然后CMD：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo g<br>hexo d<br></code></pre></td></tr></table></figure>
 <p>完成这一步后，你就省略了每一次布置网站上传网站都得在GitHub绑定域名的麻烦了。</p>
 <h3 id="更换Hexo主题"><a href="#更换Hexo主题" class="headerlink" title="更换Hexo主题"></a>更换Hexo主题</h3><p>你不喜欢丑丑的域名，自然也不会喜欢默认的丑丑的博客主题，那么你可以来<a target="_blank" rel="noopener" href="https://hexo.io/themes/" title="这里">这里</a>进行挑选，然后CMD操作进行更换：</p>
@@ -231,8 +231,8 @@
 
         
   <nav class="nav">
+    <a href="/2021/01/18/What%20i%20have%20do%20in%20the%20process%20to%20buliding%20my%20own%20blog/"><i class="iconfont iconleft"></i>第一篇博客，讲讲搭建过程</a>
     <a></a>
-    <a href="/2021/01/18/annual%20summary/">这是我的第一篇博客，讲讲搭建过程里的趣事<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
