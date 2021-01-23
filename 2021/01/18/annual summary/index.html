@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>这是我的第一篇博客，讲讲搭建过程里的趣事 - 景明&#39;s Blog</title>
+  <title>Annual Summary - 景明&#39;s Blog</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="题外话奔溃了，第一个经验教训，不要在在线MarkDow...">
+  <meta name="description" content="奇幻开年寒假的结束实际上是比较愉快的，天大的博导教授来...">
   <meta name="author" content="JingMing">
   <link rel="icon" href="/images/icons/icon16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/icon32x32.png" type="image/png" sizes="32x32">
@@ -135,7 +135,7 @@
         <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
       
     </div>
-    <div class="center">这是我的第一篇博客，讲讲搭建过程里的趣事</div>
+    <div class="center">Annual Summary</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -174,60 +174,43 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/images/one.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="D:\个人博客配图\star.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">这是我的第一篇博客，讲讲搭建过程里的趣事</h1>
+    <h1 class="head-title">Annual Summary</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>一月 18, 2021</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4030</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1627</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
-        <h3 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h3><p>奔溃了，第一个经验教训，不要在在线MarkDown编辑器上写东西，写了一个小时，没保存，网页跳转后，就全部内容丢失了。</p>
-<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>紧张但是又悠闲的期末复习周，也即2021年1月17日晚上，笔者复习运营管理的内容，实在是枯燥无聊，于是只觉得万物都变得有趣了起来，原先设想过的所有点子都一股脑出来了。不过因为是在思源学堂的办公室，所以不太可能光明正大地打游戏来摸鱼，这显然不可取，毕竟有人打游戏吃零食被拍了照片发群里，挺丢脸的。那么好久之前就设想过的搭建个人博客网站，就变成了极佳的选择，因为需要敲代码，看上去总归是在办正事。<br>在搜罗了一些背景资料后，选择倚靠GitHub与Hexo来搭建自己的博客，于是又了这篇文章来做分享，我将从完全小白（自身）角度出发，一板一眼还原过程，希望对如果也想搭建自己的个人博客的你有所帮助吧。</p>
-<h3 id="安装Git与运行"><a href="#安装Git与运行" class="headerlink" title="安装Git与运行"></a>安装Git与运行</h3><p>来，第一步，注册一个全球最大同性交友网站的账号，百度搜索GitHub，这是个外国网站，但是没有墙，所以可以流畅访问，用你的邮箱注册就可以了。进去之后呢，先点击New repository来创建，把它命名为“你的用户名.github.io”，然后请一定要注意，<br>不要设置为private！<br>不要设置为private！<br>不要设置为private！<br>那好，下一步学会下载Git，请从国内<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/" title="淘宝镜像">淘宝镜像</a>下载，因为外国网站是在是太慢了。安装的话，除了你想控制安装路径外，别的都选默认就可以了，无妨。如果安装成功了的话，你可以在自己的电脑的开始界面，看到叫做“Git Bash”的东西了。接下来，你需要知道有关叫做CMD的东西，它就在你的电脑上，就像是你看电影里的顶级黑客经常用的背景为黑色的玩意。电脑搜索框搜索“CMD”就可以看到它，点开，敲代码该干活了，切换到英文输入法，输入以下代码，输入第一条后，按下回车键，等它运行完，再输入第二行，再按回车键：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;你的GitHub用户名&quot;</span><br>git config --global user.email <span class="hljs-string">&quot;你的GitHub注册邮箱&quot;</span><br></code></pre></td></tr></table></figure>
-<p>然后输入以下代码来生成密匙：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;你的GitHub注册邮箱&quot;</span><br></code></pre></td></tr></table></figure>
-<p>连续按三个回车即可，这个时候你去自己的C：/user/用户名/.shh文件夹里，会发现一个叫做id_rsa.pub的文件，用txt打开它，复制里边的内容。然后打开<a target="_blank" rel="noopener" href="https://github.com/settings/keys" title="这个页面">这个页面</a>，新建new SSH Key，标题随便填，然后在Key框里放入你刚刚复制的内容。然后继续在CMD里边输入如下命令，再按回车：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh git@github.com<br></code></pre></td></tr></table></figure>
-<p>如果出现了三行美妙的英文，那么恭喜你成功了，电脑记住了你的存在，不会再让你重复输入账号密码了。好的，第一环节结束，恭喜你。</p>
-<h3 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h3><p>不用去理会这是什么东西，因为你我是小白，先达成目标即可。同样的，不要在官网下载它，太慢了，<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node/" title="来这里">来这里</a>，唔，如果你有梯子的话，当然直接在官网下也行。然后安装也是一样的，默认选项即可，路径自选。然后在CMD里输入以下内容，操作如前述：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">node-v<br>npm-v<br></code></pre></td></tr></table></figure>
-<p>如果出现了应用的版本，则说明你安装成功了，到这一步，你已经成为小白里的前50%的存在了，目标达成就在眼前。</p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>Hexo是什么，简单讲一下。如果你是细心的互联网冲浪选手，会发现很多网站底部都有Powered By xxx的字样，而Hexo就是xxx里的一个，也就是我们搭建个人网站的框架。到这里，请你在自己电脑喜欢的位置新建一个文件夹，建议命名为Myblog，当然，你可以自主命名，但是请不要含有中文字符。妥，记住你的这个文件夹位置，例如D：/Myblog，然后在CMD里输入以下代码运行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">D:<br>CD D:/Myblog<br></code></pre></td></tr></table></figure>
-<p>这一个步骤是为了把CMD的命令从默认的路径搬到你的Myblog文件夹里。<br>然后我们输入以下代码安装Hexo：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
-<p>因为是安装，所以还得等它自己下载，速度的快慢取决于你的网速，虽说可以把它也调整到国内源，但是因为笔者亲测速度慢但是处于可以接受的范围，所以不给添麻烦，稍安勿躁。<br>下载完成了后，我们输入以下代码来初始化也即创建我们的博客：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init blog<br></code></pre></td></tr></table></figure>
-<p>如此，实际上我们的博客已经建好了，我们再输入以下三个命令，来看看自己博客的情况：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new chongya<br>hexo g<br>hexo s<br></code></pre></td></tr></table></figure>
-<p>运行完毕后，你在自己的浏览器打开地址localhost:4000 ，就可以看到自己的博客了！当然它是默认的，而且是没联网的，我们得继续努力。在进行关键下个步骤的讲解复盘前，我们总结几条常用Hexo命令，你不需要死记硬背，只需要用的时候瞥一眼就行。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo -g     <span class="hljs-comment">#安装Hexonpm update </span><br>hexo -g    <span class="hljs-comment">#升级 hexo init    #初始化博客命令简写</span><br>hexo n  <span class="hljs-string">&quot;我的博客&quot;</span> == hexo new  <span class="hljs-string">&quot;我的博客&quot;</span>   <span class="hljs-comment">#新建文章 意为hexo n &quot;我的博客&quot;和后者代码等效，下同</span><br>hexo g == hexo generate   <span class="hljs-comment">#生成</span><br>hexo s == hexo server   <span class="hljs-comment">#启动服务预览</span><br>hexo d == hexo deploy   <span class="hljs-comment">#部署</span><br>hexo server     <span class="hljs-comment">#Hexo会监视文件变动并自动更新，无须重启服务器</span><br>hexo server -s    <span class="hljs-comment">#静态模式</span><br>hexo server -p 5000     <span class="hljs-comment">#更改端口</span><br>hexo server -i 192.168.1.1     <span class="hljs-comment">#自定义 IP</span><br>hexo clean     <span class="hljs-comment">#清除缓存，若是网页正常情况下可以忽略这条命令</span><br></code></pre></td></tr></table></figure>
-<h3 id="上传网站"><a href="#上传网站" class="headerlink" title="上传网站"></a>上传网站</h3><p>也就是我们期待很久了的，把你的网站放到网上让朋友们也能看到的操作。在此之前，我们需要注意一个文件，在我们的D:/Myblog中，叫做config.yml,它叫做站点配置文件，很有用。我们先打开它，找到它的这个部分并且补充修改为以下内容：<br>deploy:<br>type: git<br>repo: <a target="_blank" rel="noopener" href="http://github.com/GitHub%E7%94%A8%E6%88%B7%E5%90%8D/GitHub%E7%94%A8%E6%88%B7%E5%90%8D.github.io.git">http://github.com/GitHub用户名/GitHub用户名.github.io.git</a><br>branch: master<br>注意，每个冒号后都得有空格。<br>然后我们再在CMD里输入运行代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
-<p>再输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean <br>hexo g <br>hexo d<br></code></pre></td></tr></table></figure>
-<p>行，到这里一切顺利没有出问题的话，你的朋友就可以通过在浏览器输入你的用户名.github.io到达你的网站了！Congratulation！</p>
-<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>我知道，大伙肯定不会满意这个丑丑又难听的网站域名。但是，这是免费的，好听的你得买！去腾讯云吧，买个域名很简单，这里不做介绍，因为你百度腾讯云后，是个很友好的商业界面，我们说说买完了后你要干什么。<br>第一步，实名认证，不实名认证的话，你的域名是没有办法生效的，也就是无用。从提交身份证实名认证到审核完成后，大抵需要一天时间。<br>第二步，添加解析如下图，聪明如你，到这里说明你已经超过90%的小白，应该能看懂这个图。<br><img    class="lazyload" data-original="D:/个人博客配图/域名解析.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">avatar</span><br>第三步，在GitHub你创建的repository里点击settings，找到custom domain选项，把你买的域名填进去保存。<br>第四步，在D/Myblog/source创建一个txt文件，命名为CNAME，然后把你的域名填进去，别加www,然后另存为<strong>所有类型</strong>，然后把它的txt后缀删除。然后CMD：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo g<br>hexo d<br></code></pre></td></tr></table></figure>
-<p>完成这一步后，你就省略了每一次布置网站上传网站都得在GitHub绑定域名的麻烦了。</p>
-<h3 id="更换Hexo主题"><a href="#更换Hexo主题" class="headerlink" title="更换Hexo主题"></a>更换Hexo主题</h3><p>你不喜欢丑丑的域名，自然也不会喜欢默认的丑丑的博客主题，那么你可以来<a target="_blank" rel="noopener" href="https://hexo.io/themes/" title="这里">这里</a>进行挑选，然后CMD操作进行更换：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/作者GitHub用户名/hexo-theme-主题名 themes/主题名<br></code></pre></td></tr></table></figure>
-<p>运行完这个后，你就把人家的主题下载到自己的电脑里边了，它在D:/Myblog/themes里。好，到这一步，你还没有用上这个主题，你得打开我们前面说的D:/Myblog/config.yml文件，把theme： 改为theme：主题名，这样一来，你就用上了这个主题。<br>之后，因为主题里面也有很多内容可以编辑修改，你可以通过打开D：/Myblog/themes/config.yml来进行修改，需要注意的是，这个yml后缀文件是主题配置文件，不同于我们上面说的站点配置文件，所以千万别搞混。至于怎么修改这个文件来进行网站的配置，你可以看作者的GitHub，作者们一般都会无私告知，发挥你的想象力吧！</p>
-<h3 id="怎么发布文章"><a href="#怎么发布文章" class="headerlink" title="怎么发布文章"></a>怎么发布文章</h3><p>你的D:/Myblog/source/posts文件夹下面，应该有几个后缀为md的文件，这些个文件就是你发布的文章，下载MarkDown编辑器吧，开始书写文章，然后把他们放到这个posts文件夹里边，就万事大吉了！你要问我MarkDown是个什么东西的话，请来<a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html" title="这里">这里</a>学习。聪明的你，一定不难掌握这门基础的语法，毕竟它比英语、法语的语法简单多了不是吗？</p>
-<h3 id="说在最后"><a href="#说在最后" class="headerlink" title="说在最后"></a>说在最后</h3><p>现在是2021年1月21日凌晨3:48。我在思源学堂等着，等到点坐大巴去机场，窗外下雨，淋雨来的思源，不得已把外套脱掉了，总归是有点寒意的。但同时又觉得幸运，思源的环境可比网吧好多了，在这里独享清闲，不是件坏事。<br>最后，昨天发布的疫情最新通知让我意识到，我们仍然处于新冠肺炎疫情的阴影之下，祈望新的一年，国泰民安，吉祥如意。</p>
+        <h3 id="奇幻开年"><a href="#奇幻开年" class="headerlink" title="奇幻开年"></a>奇幻开年</h3><p>寒假的结束实际上是比较愉快的，天大的博导教授来给我们上冬季小学期的课，在这短短几天的课里，虽然划水居多，但是最后抱着水课的心情去完成的小学期，展示的内容竟然也被认可还拿了个第二名，还获得了一盒德芙巧克力。<br>抱着期待的心情放假回家，实际上也早听闻了武汉方面的肺炎疫情，可总归是被反复辟谣，却没想到这一下子就把寒假硬生生拉到了五月份。不知道翘了小学期课回家的同学是什么感受，是否也会想念一下学校里的日子？<br>在这么个背景下，由于老妈去给哥哥带孩子，我和老爹就相依为命在疫情期间做饭吃，即使我大部分情况下都是照搬菜谱，可也算是过得有模有样，毕竟之前从未有过这种频繁做饭的体验。<br>新冠疫情下的生活带来了挺多社会热点，也带来了很多较为负面的情绪，我先前非常非常崇拜的一位历史人物的形象轰然倒塌，衍生出的思考、启迪对我影响太大。</p>
+<h3 id="对半分的学校"><a href="#对半分的学校" class="headerlink" title="对半分的学校"></a>对半分的学校</h3><p>很幸运的是，疫情控制的比较及时，免不了歌颂祖国歌颂社会的文章，但赞美来得不夸张，否则也难有实体学上。大二下学期宿舍只余三个人到校，学校也像这样一般对半分了，一半网课一半在校。不知道怎么回事来着，我莫名其妙地因为疫情不出门的原因，蓄上了不短的头发，后来干脆绑起来了辫子，图个新鲜劲，可惜不是很会打理和凸造型，所以并未长久地把辫子给留下去。学校人不多，却没让人觉得冷清，反而觉得这才是一所大学应有的学生数量。<br>对半分的学校里，也对半分了生活。多数时候，也得待在宿舍上网课，体育课的木球成为了我非常珍惜的户外活动。除此之外，还以别致的方法重新和一位老朋友联络了关系，加深了友情。另外，在不幸中招住进邵逸夫的第三天，由于好巧不巧在课堂上的论文阅读展示分享了一篇基于博弈论的营销学论文，被宇慧姐邀请加入课题组做科研，也开启了我大学除了课堂外，课题组会的一面生活。</p>
+<h3 id="稀烂的节奏"><a href="#稀烂的节奏" class="headerlink" title="稀烂的节奏"></a>稀烂的节奏</h3><p>也不知道是自己的懒散成性还是“随性的自律”害的，生活过得非常没有节奏感。疫情在家期间，学了一段时间的雅思，写完两本剑桥就作罢了；初级会计学学到一半就自己放弃了；唯有科一科二过了是件值得一提的事情。全年一直有在坚持的事情也就是背单词了，词汇量从大一的三千到如今的破万还算是不错。另外无论是应用统计学上课学的SAS（吐槽一下老师，我完全是面向CSDN学习），还是自学的Python，Eviews，都不能称上很精通，甚至SPSS都不太好拿出手，因为自己全然是一味使用这些软件，而没有真正系统地学完统计学的理论知识，有点担心自己是在建一座知识的空中楼阁。整个人的提升，只能说是在稀烂的节奏里捡的漏，没有系统化的进步。</p>
+<h3 id="自我评价"><a href="#自我评价" class="headerlink" title="自我评价"></a>自我评价</h3><p>其实挺想给自己来个公正客观的年度总结，但是毕竟嘛，写东西的过程是会累的，没有突如其来的热情，甚至懒得动笔来书写自己，所以也不见得能客观评价自己，甚至也不见得能褒义或者贬义地评价自己，只能是跳跃性的，假象性的，缺漏性地来给自己做个画像了。<br>由不得过分吐槽，这一年的自己很没有实体感，目标想好了但是执行力不够，方向选好了但是懈怠于努力，在细枝末节上浪费太多时间。我或许有些时候会比较自恋，也有时候会表现地非常乐观，但是这都太没有实际支撑了。唯一做好了的地方就是稍微读了些书，赚了点钱，此外的都属于正常的步骤轨迹，不值得在此提及。<br>新的一年里，无论如何得要以目标为导向，有计划的系统性的提升自己，抛弃掉随性的自律吧。<br>###杂项</p>
+<ul>
+<li>兼职收入22000人民币</li>
+<li>连续一年联合国儿基会捐款</li>
+<li>英文词汇量突破1w，且通过CET6</li>
+<li>二等奖学金与三好学生荣誉</li>
+<li>中央电化教育厅论文活动二等奖</li>
+<li>校辩论赛冠军</li>
+<li>学会使用包括SPSS,Python,Eviews,SAS,SQL在内的软件</li>
+<li>读书超过20本</li>
+<li>体验了一把长发</li>
+<li>校内全年冷水澡</li>
+</ul>
+<hr>
+<p>优秀的人站在塔尖喝着庆祝的香槟分享幸不辱命的成功故事，跌倒的人落魄抬头充满悲伤默默仰望，静静回想复盘自己是哪一步错了。或许我应该要求自己无论能不能站到所谓的塔尖，都得要在回头思考的时候，也能觉得没有饶过时间，耽误年月。<br>新的一年需要加油。</p>
 
       </section>
       <section class="extra">
         
         
         
-  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E8%90%A5/" rel="tag">运营</a></li></ul> 
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a></li></ul> 
 
         
   <nav class="nav">
@@ -245,7 +228,7 @@
           
   <aside class="toc-wrap">
     <h3 class="toc-title">文章目录：</h3>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E5%A4%96%E8%AF%9D"><span class="toc-text">题外话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-text">起因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Git%E4%B8%8E%E8%BF%90%E8%A1%8C"><span class="toc-text">安装Git与运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Node"><span class="toc-text">安装Node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E7%BD%91%E7%AB%99"><span class="toc-text">上传网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98"><span class="toc-text">更换Hexo主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0"><span class="toc-text">怎么发布文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-text">说在最后</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%87%E5%B9%BB%E5%BC%80%E5%B9%B4"><span class="toc-text">奇幻开年</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E5%8D%8A%E5%88%86%E7%9A%84%E5%AD%A6%E6%A0%A1"><span class="toc-text">对半分的学校</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%80%E7%83%82%E7%9A%84%E8%8A%82%E5%A5%8F"><span class="toc-text">稀烂的节奏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E6%88%91%E8%AF%84%E4%BB%B7"><span class="toc-text">自我评价</span></a></li></ol>
   </aside>
 
         
