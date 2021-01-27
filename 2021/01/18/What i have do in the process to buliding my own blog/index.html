@@ -180,7 +180,7 @@
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>一月 18, 2021</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4039</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4038</span>
     </div>
   </div>
 </section>
@@ -213,14 +213,16 @@
 <p>再输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean <br>hexo g <br>hexo d<br></code></pre></td></tr></table></figure>
 <p>行，到这里一切顺利没有出问题的话，你的朋友就可以通过在浏览器输入你的用户名.github.io到达你的网站了！Congratulation！</p>
-<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>我知道，大伙肯定不会满意这个丑丑又难听的网站域名。但是，这是免费的，好听的你得买！去腾讯云吧，买个域名很简单，这里不做介绍，因为你百度腾讯云后，是个很友好的商业界面，我们说说买完了后你要干什么。<br>第一步，实名认证，不实名认证的话，你的域名是没有办法生效的，也就是无用。从提交身份证实名认证到审核完成后，大抵需要一天时间。<br>第二步，添加解析如下图，聪明如你，到这里说明你已经超过90%的小白，应该能看懂这个图。<br><img    class="lazyload" data-original="D:\个人博客配图\域名解析.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">avatar</span><br>第三步，在GitHub你创建的repository里点击settings，找到custom domain选项，把你买的域名填进去保存。<br>第四步，在D/Myblog/source创建一个txt文件，命名为CNAME，然后把你的域名填进去，别加www,然后另存为<strong>所有类型</strong>，然后把它的txt后缀删除。然后CMD：</p>
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>我知道，大伙肯定不会满意这个丑丑又难听的网站域名。但是，这是免费的，好听的你得买！去腾讯云吧，买个域名很简单，这里不做介绍，因为你百度腾讯云后，是个很友好的商业界面，我们说说买完了后你要干什么。<br>第一步，实名认证，不实名认证的话，你的域名是没有办法生效的，也就是无用。从提交身份证实名认证到审核完成后，大抵需要一天时间。<br>第二步，添加解析如下图，聪明如你，到这里说明你已经超过90%的小白，应该能看懂这个图。<br><img    class="lazyload" data-original="/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E5%9B%BE/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">one</span><br>第三步，在GitHub你创建的repository里点击settings，找到custom domain选项，把你买的域名填进去保存。<br>第四步，在D/Myblog/source创建一个txt文件，命名为CNAME，然后把你的域名填进去，别加www,然后另存为<strong>所有类型</strong>，然后把它的txt后缀删除。然后CMD：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo g<br>hexo d<br></code></pre></td></tr></table></figure>
 <p>完成这一步后，你就省略了每一次布置网站上传网站都得在GitHub绑定域名的麻烦了。</p>
 <h3 id="更换Hexo主题"><a href="#更换Hexo主题" class="headerlink" title="更换Hexo主题"></a>更换Hexo主题</h3><p>你不喜欢丑丑的域名，自然也不会喜欢默认的丑丑的博客主题，那么你可以来<a target="_blank" rel="noopener" href="https://hexo.io/themes/" title="这里">这里</a>进行挑选，然后CMD操作进行更换：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/作者GitHub用户名/hexo-theme-主题名 themes/主题名<br></code></pre></td></tr></table></figure>
 <p>运行完这个后，你就把人家的主题下载到自己的电脑里边了，它在D:/Myblog/themes里。好，到这一步，你还没有用上这个主题，你得打开我们前面说的D:/Myblog/config.yml文件，把theme： 改为theme：主题名，这样一来，你就用上了这个主题。<br>之后，因为主题里面也有很多内容可以编辑修改，你可以通过打开D：/Myblog/themes/config.yml来进行修改，需要注意的是，这个yml后缀文件是主题配置文件，不同于我们上面说的站点配置文件，所以千万别搞混。至于怎么修改这个文件来进行网站的配置，你可以看作者的GitHub，作者们一般都会无私告知，发挥你的想象力吧！</p>
 <h3 id="怎么发布文章"><a href="#怎么发布文章" class="headerlink" title="怎么发布文章"></a>怎么发布文章</h3><p>你的D:/Myblog/source/posts文件夹下面，应该有几个后缀为md的文件，这些个文件就是你发布的文章，下载MarkDown编辑器吧，开始书写文章，然后把他们放到这个posts文件夹里边，就万事大吉了！你要问我MarkDown是个什么东西的话，请来<a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html" title="这里">这里</a>学习。聪明的你，一定不难掌握这门基础的语法，毕竟它比英语、法语的语法简单多了不是吗？</p>
-<h3 id="说在最后"><a href="#说在最后" class="headerlink" title="说在最后"></a>说在最后</h3><p>现在是2021年1月21日凌晨3:48。我在思源学堂等着，等到点坐大巴去机场，窗外下雨，淋雨来的思源，不得已把外套脱掉了，总归是有点寒意的。但同时又觉得幸运，思源的环境可比网吧好多了，在这里独享清闲，不是件坏事。<br>最后，昨天发布的疫情最新通知让我意识到，我们仍然处于新冠肺炎疫情的阴影之下，祈望新的一年，国泰民安，吉祥如意。</p>
+<h3 id="说在最后"><a href="#说在最后" class="headerlink" title="说在最后"></a>说在最后</h3><p>现在是2021年1月21日凌晨3:48。我在思源学堂等着，等到点坐大巴去机场，窗外下雨，淋雨来的思源，不得已把外套脱掉了，总归是有点寒意的。但同时又觉得幸运，思源的环境可比网吧好多了，在这里独享清闲，不是件坏事。</p>
+<hr>
+<p>最后，昨天发布的疫情最新通知让我意识到，我们仍然处于新冠肺炎疫情的阴影之下，祈望新的一年，国泰民安，吉祥如意。</p>
 
       </section>
       <section class="extra">
