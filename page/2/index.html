@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>生活 - 景明&#39;s Blog</title>
+  <title>景明&#39;s Blog</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
@@ -57,7 +57,7 @@
     var CONFIG = window.CONFIG || {};
     var ZHAOO = window.ZHAOO || {};
     CONFIG = {
-      isHome: false,
+      isHome: true,
       fancybox: true,
       pjax: false,
       lazyload: {
@@ -126,24 +126,6 @@
   
 
 
-  <nav class="navbar">
-    <div class="left">
-      
-        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
-      
-      
-        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
-      
-    </div>
-    <div class="center">标签</div>
-    <div class="right">
-      <i class="iconfont iconmenu j-navbar-menu"></i>
-    </div>
-    
-      <div id="qrcode-navbar"></div>
-    
-  </nav>
-
   
 
 <nav class="menu">
@@ -168,65 +150,72 @@
   </div>
 </nav>
   <main id="main">
-  <section class="archive">
-    <div class="archive-container">
-      <div class="archive-post">
-        <h2 class="archive-total"># 生活</h2>
+  
+    <div class="preview">
+  <nav class="navbar j-navbar-menu">
+    <i class="iconfont iconmenu"></i>
+  </nav>
+  <div class="preview-image">
+    <h2 class="preview-motto" id="motto">羡总角闻道，憾白首无成</h2>
+    <!-- <span class="preview-cursor">|</span> -->
+    
+      <div class="preview-overlay">
+        <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="preview-parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(var(--color-background-rgb),0.7"></use>
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(var(--color-background-rgb),0.5)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(var(--color-background-rgb),0.3)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--color-background)"></use>
+          </g>
+        </svg>
+      </div>
+    
+  </div>
+  <div class="preview-scroll">
+    <a href="#container" class="smooth-scroll"><i class="iconfont iconMouse"></i></a>
+  </div>
+</div>
+  
+  <div class="container" id="container">
+    <section class="row post">
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/2021/01/18/What%20i%20have%20do%20in%20the%20process%20to%20buliding%20my%20own%20blog/" class="post-image">
+      <img   class="lazyload" data-original="/images/one.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/2021/01/18/What%20i%20have%20do%20in%20the%20process%20to%20buliding%20my%20own%20blog/" title="第一篇博客，讲讲搭建过程" >第一篇博客，讲讲搭建过程</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">题外话奔溃了，第一个经验教训，不要在在线MarkDown编辑器上写东西，写了一个小时，没保存，网页跳转后，全部内容都丢失了。
+起因紧张但是又悠闲的期末复习周，也即2021年1月17日晚上，在复习...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>一月 18, 2021</span>
         
-        
-          
-            <h3 class="archive-year">2021 年</h3>
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2021/10/11/childhood/">10/11</a>
-            <a class="archive-title" href="/2021/10/11/childhood/">21岁第一天，我最怀念徐浩鹏君</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2021/09/05/life/">09/05</a>
-            <a class="archive-title" href="/2021/09/05/life/">非典型人生</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2021/02/27/Wu/">02/27</a>
-            <a class="archive-title" href="/2021/02/27/Wu/">巨星陨落，笑留人间</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2021/02/09/translator/">02/09</a>
-            <a class="archive-title" href="/2021/02/09/translator/">瞎琢磨写了个小程序</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2021/02/07/Science%20Fiction/">02/07</a>
-            <a class="archive-title" href="/2021/02/07/Science%20Fiction/">孤独深处</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2021/01/27/ski/">01/27</a>
-            <a class="archive-title" href="/2021/01/27/ski/">以滑的名义</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2021/01/23/annual%20summary/">01/23</a>
-            <a class="archive-title" href="/2021/01/23/annual%20summary/">Annual Summary</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2021/01/18/What%20i%20have%20do%20in%20the%20process%20to%20buliding%20my%20own%20blog/">01/18</a>
-            <a class="archive-title" href="/2021/01/18/What%20i%20have%20do%20in%20the%20process%20to%20buliding%20my%20own%20blog/">第一篇博客，讲讲搭建过程</a>
-          </div>
-        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>4038</span>
       </div>
     </div>
-  </section>
+  </div>
+</div>
+
+  
+</section>
+    <section class="paginator">
+  
+    <a class="extend prev" rel="prev" href="/">&lt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  
+</section>
+  </div>
 </main>
   
 
