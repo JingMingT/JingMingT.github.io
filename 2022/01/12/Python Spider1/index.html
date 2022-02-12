@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>新闻联播标题爬取练习 - 景明&#39;s Blog</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="需求描述：1.爬取时间段处于2000年到2021年的新...">
+  <meta name="author" content="JingMing">
+  <link rel="icon" href="/images/icons/icon16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/icon32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/icon180x180.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/icon500x500" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/icon144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/226-splashy-loader.gif'
+      },
+      donate: {
+        enable: false,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '/images/theme/welcome-image2.jpg',
+          api: 'https://api.vvhan.com/api/bing?type=sj'
+        },
+        motto: {
+          default: '羡总角闻道，憾白首无成',
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        model: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">新闻联播标题爬取练习</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Author - <a >谭海胜</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/xinwen.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">新闻联播标题爬取练习</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>一月 12, 2022</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5982</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h2 id="需求描述："><a href="#需求描述：" class="headerlink" title="需求描述："></a><strong>需求描述：</strong></h2><p>1.爬取时间段处于2000年到2021年的新闻联播标题<br>2.爬取格式为时间+标题字段</p>
+<h2 id="实现路径分析："><a href="#实现路径分析：" class="headerlink" title="实现路径分析："></a><strong>实现路径分析：</strong></h2><p>1.探查数据源，选择合适易爬取的网站。<br>①2016年到2021年时间段选择<a target="_blank" rel="noopener" href="http://mrxwlb.com/category/mrxwlb-text/amp/">每日新闻联播</a><br>②2012到2015年时间段选择<a target="_blank" rel="noopener" href="http://cctv.cntv.cn/lm/xinwenlianbo/20140101.shtml">老官网</a><br>③2007到2009年时间段选择<a target="_blank" rel="noopener" href="http://www.cctv.com/news/xwlb/20090625/index.shtml">老老官网</a></p>
+<h2 id="暂未解决的问题"><a href="#暂未解决的问题" class="headerlink" title="暂未解决的问题"></a><strong>暂未解决的问题</strong></h2><p>1.2009年6月28日到2012年1月1日之间的新闻找不到数据源，2002年10月1日前的新闻找不到数据源；<br>2.2007年以前的新闻都存在着网页跳转的问题①尝试常规解法，发现网页有加密，bs提取到的页面信息不全。又由于3秒内跳出网页因此②没法使用selenium模拟浏览器行为来爬取（时间太短）。</p>
+<h2 id="具体实现过程"><a href="#具体实现过程" class="headerlink" title="具体实现过程"></a><strong>具体实现过程</strong></h2><p>①使用request和bs库爬取即可，使用openpyxl库来储存数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests,openpyxl<br><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup<br></code></pre></td></tr></table></figure>
+<p>②确定网址逻辑，观察发现，是以xxxxYxxMxxD的格式来构建的。因此用笨办法，构建年月日的列表如下，同时考虑到大小月的日数不同，构筑三个列表来区分。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python">Y=[<span class="hljs-number">2016</span>,<span class="hljs-number">2017</span>,<span class="hljs-number">2018</span>,<span class="hljs-number">2019</span>,<span class="hljs-number">2020</span>,<span class="hljs-number">2021</span>]<span class="hljs-comment">#待爬取的年份</span><br>M=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>]<span class="hljs-comment">#待爬取的月份</span><br>D1=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>,<span class="hljs-number">16</span>,<span class="hljs-number">17</span>,<span class="hljs-number">18</span>,<span class="hljs-number">19</span>,<span class="hljs-number">20</span>,<span class="hljs-number">21</span>,<span class="hljs-number">22</span>,<span class="hljs-number">23</span>,<span class="hljs-number">24</span>,<span class="hljs-number">25</span>,<span class="hljs-number">26</span>,<span class="hljs-number">27</span>,<span class="hljs-number">28</span>]<span class="hljs-comment">#非闰二月</span><br>D2=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>,<span class="hljs-number">16</span>,<span class="hljs-number">17</span>,<span class="hljs-number">18</span>,<span class="hljs-number">19</span>,<span class="hljs-number">20</span>,<span class="hljs-number">21</span>,<span class="hljs-number">22</span>,<span class="hljs-number">23</span>,<span class="hljs-number">24</span>,<span class="hljs-number">25</span>,<span class="hljs-number">26</span>,<span class="hljs-number">27</span>,<span class="hljs-number">28</span>,<span class="hljs-number">29</span>,<span class="hljs-number">30</span>]<span class="hljs-comment">#小月</span><br>D3=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>,<span class="hljs-number">16</span>,<span class="hljs-number">17</span>,<span class="hljs-number">18</span>,<span class="hljs-number">19</span>,<span class="hljs-number">20</span>,<span class="hljs-number">21</span>,<span class="hljs-number">22</span>,<span class="hljs-number">23</span>,<span class="hljs-number">24</span>,<span class="hljs-number">25</span>,<span class="hljs-number">26</span>,<span class="hljs-number">27</span>,<span class="hljs-number">28</span>,<span class="hljs-number">29</span>,<span class="hljs-number">30</span>,<span class="hljs-number">31</span>]<span class="hljs-comment">#大月</span><br>lm=[<span class="hljs-string">&#x27;02&#x27;</span>]<span class="hljs-comment">#非闰小月28天</span><br>mm=[<span class="hljs-string">&#x27;04&#x27;</span>,<span class="hljs-string">&#x27;06&#x27;</span>,<span class="hljs-string">&#x27;09&#x27;</span>,<span class="hljs-string">&#x27;11&#x27;</span>]<span class="hljs-comment">#中月3天</span><br>bm=[<span class="hljs-string">&#x27;01&#x27;</span>,<span class="hljs-string">&#x27;03&#x27;</span>,<span class="hljs-string">&#x27;05&#x27;</span>,<span class="hljs-string">&#x27;07&#x27;</span>,<span class="hljs-string">&#x27;08&#x27;</span>,<span class="hljs-string">&#x27;10&#x27;</span>,<span class="hljs-string">&#x27;12&#x27;</span>]<span class="hljs-comment">#大月31天</span><br><span class="hljs-comment">#列表组合循环生成网址</span><br></code></pre></td></tr></table></figure>
+<p>③生成每个网址url，elif虽然比较丑，但是胜在方便</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">W1=<span class="hljs-string">&quot;http://mrxwlb.com/&quot;</span><br>W2=<span class="hljs-string">&quot;新闻联播文字版/amp/&quot;</span><br><span class="hljs-comment">#网址的必备字段</span><br><span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> Y:<br>    <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> M:<br>        <span class="hljs-keyword">if</span> m <span class="hljs-keyword">in</span> lm:<span class="hljs-comment">#判断 小月，中月，大月</span><br>            <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> D1:<br>                url=W1+<span class="hljs-built_in">str</span>(y)+<span class="hljs-string">&#x27;年&#x27;</span>+<span class="hljs-built_in">str</span>(m)+<span class="hljs-string">&quot;月&quot;</span>+<span class="hljs-built_in">str</span>(d)+<span class="hljs-string">&quot;日&quot;</span>+W2<br></code></pre></td></tr></table></figure>
+<p>④F12查看网页元素，确定新闻标题位置，确定目标字段位置为</p>
+<blockquote>
+<p>find(“div”,class_=”cntn-wrp artl-cnt”).find_all(“li”)</p>
+</blockquote>
+<p>书写储存代码如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">wb=openpyxl.Workbook()<br>sheet=wb.active<br>sheet.title=<span class="hljs-string">&#x27;新闻采集（2016年-2021年）&#x27;</span><br>sheet[<span class="hljs-string">&#x27;A1&#x27;</span>]=<span class="hljs-string">&#x27;网址&#x27;</span><br>sheet[<span class="hljs-string">&#x27;B1&#x27;</span>]=<span class="hljs-string">&#x27;标题&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>书写爬取代码如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">list_html=bs_html.find(<span class="hljs-string">&quot;div&quot;</span>,class_=<span class="hljs-string">&quot;cntn-wrp artl-cnt&quot;</span>).find_all(<span class="hljs-string">&quot;li&quot;</span>)<span class="hljs-comment">#定位字段                                </span><br>	<span class="hljs-keyword">for</span> title <span class="hljs-keyword">in</span> list_html:<br>	name=title.text<br>	sheet.append([url,name])<br></code></pre></td></tr></table></figure>
+<p>⑤异常URL处理，由于<a target="_blank" rel="noopener" href="http://mrxwlb.com/category/mrxwlb-text/amp/">每日新闻联播</a>的网址会有一些很幼稚的错误，例如把网址里的新闻联播打错字成“新联联播”所以需要一个try，except判断防止程序中断，并且打印出有问题的网址，以供人工排查，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">try</span>:<br>    ....<span class="hljs-comment">#爬取网页的代码</span><br><span class="hljs-keyword">except</span> AttributeError:<span class="hljs-comment">#打印异常值</span><br>	print(<span class="hljs-string">&quot;WARNING!!!WARNING!!!WARNING!!!&quot;</span>)<br>	print(<span class="hljs-string">&#x27;↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓这个url出错了↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓&#x27;</span>)<br>	print(url)<br>	print(<span class="hljs-string">&#x27;↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑这个url出错了↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑&#x27;</span>)<br>	print(<span class="hljs-string">&quot;WARNING!!!WARNING!!!WARNING!!!&quot;</span>)<br></code></pre></td></tr></table></figure>
+<p><strong>结尾：</strong><br>1.至此，本次练习结束，爬取数据基本无误。<br>2.除了2012年与2013年的网页数据外，其他都可以用上述代码进行爬取，而2012年与2013年需要使用正则表达式来爬取，因此更改find方法为如下正则表达式即可：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">pattern=re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">&quot;(?&lt;=\(&#x27;)(.+?)(?=&#x27;,&#x27;)&quot;</span>)<span class="hljs-comment">#正则表达式</span><br>result=pattern.findall(<span class="hljs-built_in">str</span>(bs_html))<br></code></pre></td></tr></table></figure>
+<p>3.暂未解决前述环节提到的问题，欢迎交流指导。</p>
+<p><strong>完整代码见下，希望能帮助到你。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests,openpyxl<br><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup<br>Y=[<span class="hljs-number">2016</span>,<span class="hljs-number">2017</span>,<span class="hljs-number">2018</span>,<span class="hljs-number">2019</span>,<span class="hljs-number">2020</span>,<span class="hljs-number">2021</span>]<span class="hljs-comment">#待爬取的年份</span><br>M=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>]<span class="hljs-comment">#待爬取的月份</span><br>D1=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>,<span class="hljs-number">16</span>,<span class="hljs-number">17</span>,<span class="hljs-number">18</span>,<span class="hljs-number">19</span>,<span class="hljs-number">20</span>,<span class="hljs-number">21</span>,<span class="hljs-number">22</span>,<span class="hljs-number">23</span>,<span class="hljs-number">24</span>,<span class="hljs-number">25</span>,<span class="hljs-number">26</span>,<span class="hljs-number">27</span>,<span class="hljs-number">28</span>]<span class="hljs-comment">#非闰二月</span><br>D2=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>,<span class="hljs-number">16</span>,<span class="hljs-number">17</span>,<span class="hljs-number">18</span>,<span class="hljs-number">19</span>,<span class="hljs-number">20</span>,<span class="hljs-number">21</span>,<span class="hljs-number">22</span>,<span class="hljs-number">23</span>,<span class="hljs-number">24</span>,<span class="hljs-number">25</span>,<span class="hljs-number">26</span>,<span class="hljs-number">27</span>,<span class="hljs-number">28</span>,<span class="hljs-number">29</span>,<span class="hljs-number">30</span>]<span class="hljs-comment">#小月</span><br>D3=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>,<span class="hljs-number">14</span>,<span class="hljs-number">15</span>,<span class="hljs-number">16</span>,<span class="hljs-number">17</span>,<span class="hljs-number">18</span>,<span class="hljs-number">19</span>,<span class="hljs-number">20</span>,<span class="hljs-number">21</span>,<span class="hljs-number">22</span>,<span class="hljs-number">23</span>,<span class="hljs-number">24</span>,<span class="hljs-number">25</span>,<span class="hljs-number">26</span>,<span class="hljs-number">27</span>,<span class="hljs-number">28</span>,<span class="hljs-number">29</span>,<span class="hljs-number">30</span>,<span class="hljs-number">31</span>]<span class="hljs-comment">#大月</span><br>lm=[<span class="hljs-string">&#x27;02&#x27;</span>]<span class="hljs-comment">#非闰小月28天</span><br>mm=[<span class="hljs-string">&#x27;04&#x27;</span>,<span class="hljs-string">&#x27;06&#x27;</span>,<span class="hljs-string">&#x27;09&#x27;</span>,<span class="hljs-string">&#x27;11&#x27;</span>]<span class="hljs-comment">#中月3天</span><br>bm=[<span class="hljs-string">&#x27;01&#x27;</span>,<span class="hljs-string">&#x27;03&#x27;</span>,<span class="hljs-string">&#x27;05&#x27;</span>,<span class="hljs-string">&#x27;07&#x27;</span>,<span class="hljs-string">&#x27;08&#x27;</span>,<span class="hljs-string">&#x27;10&#x27;</span>,<span class="hljs-string">&#x27;12&#x27;</span>]<span class="hljs-comment">#大月31天</span><br><span class="hljs-comment">#列表组合循环生成网址</span><br><br>W1=<span class="hljs-string">&quot;http://mrxwlb.com/&quot;</span><br>W2=<span class="hljs-string">&quot;新闻联播文字版/amp/&quot;</span><br><span class="hljs-comment">#网址的必备字段</span><br><br>wb=openpyxl.Workbook()<br>sheet=wb.active<br>sheet.title=<span class="hljs-string">&#x27;新闻采集（2016年-2021年）&#x27;</span><br>sheet[<span class="hljs-string">&#x27;A1&#x27;</span>]=<span class="hljs-string">&#x27;网址&#x27;</span><br>sheet[<span class="hljs-string">&#x27;B1&#x27;</span>]=<span class="hljs-string">&#x27;标题&#x27;</span><br><span class="hljs-comment">#创建表格储存数据</span><br><br><span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> Y:<br>    <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> M:<br>        <span class="hljs-keyword">if</span> m <span class="hljs-keyword">in</span> lm:<span class="hljs-comment">#判断 小月</span><br>            <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> D1:<br>                url=W1+<span class="hljs-built_in">str</span>(y)+<span class="hljs-string">&#x27;年&#x27;</span>+<span class="hljs-built_in">str</span>(m)+<span class="hljs-string">&quot;月&quot;</span>+<span class="hljs-built_in">str</span>(d)+<span class="hljs-string">&quot;日&quot;</span>+W2<br>                res_html=requests.get(url)<br>                bs_html=BeautifulSoup(res_html.text,<span class="hljs-string">&quot;html.parser&quot;</span>)<br>                <span class="hljs-keyword">try</span>:<br>                    list_html=bs_html.find(<span class="hljs-string">&quot;div&quot;</span>,class_=<span class="hljs-string">&quot;cntn-wrp artl-cnt&quot;</span>).find_all(<span class="hljs-string">&quot;li&quot;</span>)<span class="hljs-comment">#定位字段                                  </span><br>                    <span class="hljs-keyword">for</span> title <span class="hljs-keyword">in</span> list_html:<br>                        name=title.text<br>                        sheet.append([url,name])<br>                        <span class="hljs-comment">#print(name)</span><br>                <span class="hljs-keyword">except</span> AttributeError:<span class="hljs-comment">#打印异常值</span><br>                    print(<span class="hljs-string">&quot;WARNING!!!WARNING!!!WARNING!!!&quot;</span>)<br>                    print(url)<br>                    print(<span class="hljs-string">&quot;WARNING!!!WARNING!!!WARNING!!!&quot;</span>)<br>        <span class="hljs-keyword">elif</span> m <span class="hljs-keyword">in</span> mm:<span class="hljs-comment">#判断 中月</span><br>            <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> D2:<br>                url=W1+<span class="hljs-built_in">str</span>(y)+<span class="hljs-string">&#x27;年&#x27;</span>+<span class="hljs-built_in">str</span>(m)+<span class="hljs-string">&quot;月&quot;</span>+<span class="hljs-built_in">str</span>(d)+<span class="hljs-string">&quot;日&quot;</span>+W2<br>                res_html=requests.get(url)<br>                bs_html=BeautifulSoup(res_html.text,<span class="hljs-string">&quot;html.parser&quot;</span>)<br>                <span class="hljs-keyword">try</span>:<br>                    list_html=bs_html.find(<span class="hljs-string">&quot;div&quot;</span>,class_=<span class="hljs-string">&quot;cntn-wrp artl-cnt&quot;</span>).find_all(<span class="hljs-string">&quot;li&quot;</span>)<span class="hljs-comment">#定位字段                                  </span><br>                    <span class="hljs-keyword">for</span> title <span class="hljs-keyword">in</span> list_html:<br>                        name=title.text<br>                        sheet.append([url,name])<br>                        <span class="hljs-comment">#print(name)</span><br>                <span class="hljs-keyword">except</span> AttributeError:<span class="hljs-comment">#打印异常值</span><br>                    print(<span class="hljs-string">&quot;WARNING!!!WARNING!!!WARNING!!!&quot;</span>)<br>                    print(url)<br>                    print(<span class="hljs-string">&quot;WARNING!!!WARNING!!!WARNING!!!&quot;</span>)<br>        <span class="hljs-keyword">elif</span> m <span class="hljs-keyword">in</span> bm:<span class="hljs-comment">#判断 大月</span><br>            <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> D3:<br>                url=W1+<span class="hljs-built_in">str</span>(y)+<span class="hljs-string">&#x27;年&#x27;</span>+<span class="hljs-built_in">str</span>(m)+<span class="hljs-string">&quot;月&quot;</span>+<span class="hljs-built_in">str</span>(d)+<span class="hljs-string">&quot;日&quot;</span>+W2<br>                res_html=requests.get(url)<br>                bs_html=BeautifulSoup(res_html.text,<span class="hljs-string">&quot;html.parser&quot;</span>)<br>                <span class="hljs-keyword">try</span>:<br>                    list_html=bs_html.find(<span class="hljs-string">&quot;div&quot;</span>,class_=<span class="hljs-string">&quot;cntn-wrp artl-cnt&quot;</span>).find_all(<span class="hljs-string">&quot;li&quot;</span>)<span class="hljs-comment">#定位字段                              </span><br>                    <span class="hljs-keyword">for</span> title <span class="hljs-keyword">in</span> list_html:<br>                        name=title.text<br>                        sheet.append([url,name])<br>                        <span class="hljs-comment">#print(name)</span><br>                <span class="hljs-keyword">except</span> AttributeError:<span class="hljs-comment">#打印异常值</span><br>                    print(<span class="hljs-string">&quot;WARNING!!!WARNING!!!WARNING!!!&quot;</span>)<br>                    print(url)<br>                    print(<span class="hljs-string">&quot;WARNING!!!WARNING!!!WARNING!!!&quot;</span>)<br>        <br>wb.save(<span class="hljs-string">&#x27;D:\\新闻采集（2016年-2021年）.xlsx&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<p><strong>最后，转载无需征得本人同意，但务必附上原址注明出处，感谢！</strong></p>
+
+      </section>
+      <section class="extra">
+        
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E8%90%A5/" rel="tag">运营</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2022/01/16/My%202021/"><i class="iconfont iconleft"></i>My 2021</a>
+    <a href="/2021/10/11/childhood/">21岁第一天，我最怀念徐浩鹏君<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E6%8F%8F%E8%BF%B0%EF%BC%9A"><span class="toc-text">需求描述：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E8%B7%AF%E5%BE%84%E5%88%86%E6%9E%90%EF%BC%9A"><span class="toc-text">实现路径分析：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9A%82%E6%9C%AA%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">暂未解决的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-text">具体实现过程</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1165727341 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://github.com/JingMingT "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="thsdyx@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Author - <a >谭海胜</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
